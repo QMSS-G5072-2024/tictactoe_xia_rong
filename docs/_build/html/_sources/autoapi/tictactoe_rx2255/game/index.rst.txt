@@ -1,0 +1,109 @@
+tictactoe_rx2255.game
+=====================
+
+.. py:module:: tictactoe_rx2255.game
+
+
+Functions
+---------
+
+.. autoapisummary::
+
+   tictactoe_rx2255.game.initialize_board
+   tictactoe_rx2255.game.make_move
+   tictactoe_rx2255.game.check_winner
+   tictactoe_rx2255.game.reset_game
+
+
+Module Contents
+---------------
+
+.. py:function:: initialize_board()
+
+   Creates a 3x3 Tic-Tac-Toe board initialized with empty spaces.
+
+   :returns: A 3x3 game board with all spaces initialized to ' ' (empty).
+   :rtype: list of list of str
+
+   .. rubric:: Examples
+
+   >>> board = initialize_board()
+   >>> board
+   [[' ', ' ', ' '],
+    [' ', ' ', ' '],
+    [' ', ' ', ' ']]
+
+
+.. py:function:: make_move(board, row, col, player)
+
+   Places the player's symbol ('X' or 'O') on the board at the specified position.
+
+   :param board: The current game board.
+   :type board: list of list of str
+   :param row: The row index (0-based).
+   :type row: int
+   :param col: The column index (0-based).
+   :type col: int
+   :param player: The player's symbol ('X' or 'O').
+   :type player: str
+
+   :returns: True if the move was successful, False otherwise.
+   :rtype: bool
+
+   .. rubric:: Examples
+
+   >>> board = initialize_board()
+   >>> make_move(board, 1, 1, 'X')
+   True
+   >>> board
+   [[' ', ' ', ' '],
+    [' ', 'X', ' '],
+    [' ', ' ', ' ']]
+   >>> make_move(board, 1, 1, 'O')
+   False
+
+
+.. py:function:: check_winner(board)
+
+   Checks the current board for a winner.
+
+   :param board: The current game board.
+   :type board: list of list of str
+
+   :returns: 'X' or 'O' if there is a winner, 'Draw' if it's a draw, or None if the game is ongoing.
+   :rtype: str or None
+
+   .. rubric:: Examples
+
+   >>> board = [['X', 'X', 'X'],
+                [' ', 'O', ' '],
+                ['O', ' ', ' ']]
+   >>> check_winner(board)
+   'X'
+
+   >>> board = [['X', 'O', 'X'],
+                ['O', 'O', 'X'],
+                ['X', 'X', 'O']]
+   >>> check_winner(board)
+   'Draw'
+
+
+.. py:function:: reset_game()
+
+   Resets the game by reinitializing the board.
+
+   :returns: A new 3x3 game board with all spaces initialized to ' ' (empty).
+   :rtype: list of list of str
+
+   .. rubric:: Examples
+
+   >>> board = [['X', 'O', 'X'],
+                ['O', 'X', 'O'],
+                ['X', 'O', 'X']]
+   >>> board = reset_game()
+   >>> board
+   [[' ', ' ', ' '],
+    [' ', ' ', ' '],
+    [' ', ' ', ' ']]
+
+

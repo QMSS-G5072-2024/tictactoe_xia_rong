@@ -1,0 +1,29 @@
+tictactoe_rx2255
+================
+
+.. py:module:: tictactoe_rx2255
+
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 1
+
+   /autoapi/tictactoe_rx2255/game/index
+   /autoapi/tictactoe_rx2255/tictactoe_rx2255/index
+
+
+Attributes
+----------
+
+.. autoapisummary::
+
+   tictactoe_rx2255.__version__
+
+
+Package Contents
+----------------
+
+.. py:data:: __version__
+
